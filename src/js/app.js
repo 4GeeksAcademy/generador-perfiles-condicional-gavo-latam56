@@ -40,10 +40,14 @@ function render(variables = {}) {
                ${variables.country !== null ? variables.country : "Country"}
           </h3>
           
-          <ul class="position-right">
-            <li><a href="https://twitter.com/${
-              variables.twitter !== null ? variables.twitter : "Twitter"
-            }"><i class="fab fa-twitter"></i></a></li>
+          <ul class="${
+            variables.socialMediaPosition != "position-right"
+              ? variables.socialMediaPosition
+              : "position-right"
+          }">
+           <li><a href="https://twitter.com/${
+             variables.twitter !== null ? variables.twitter : "Twitter"
+           }"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${
               variables.github !== null ? variables.github : "Github"
             }"><i class="fab fa-github"></i></a></li>
